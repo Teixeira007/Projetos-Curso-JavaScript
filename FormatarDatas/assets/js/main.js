@@ -30,6 +30,10 @@ function formatMonth(month) {
     return mes[month];
 
 }
+
+function zeroAEsquerada(temp){
+    return temp < 10 ? `0${temp}` : `${temp}`;
+}
 const dayWeek = data.getDay();
 const day = data.getDate();
 const month = data.getMonth();
@@ -40,8 +44,7 @@ console.log(month);
 
 
 campo.innerHTML = `${formatDayWeek(dayWeek)}, ${day} de ${formatMonth(month)} de 
-                    ${year} ${hours}:${minutes}`
+                    ${year} ${zeroAEsquerada(hours)}:${zeroAEsquerada(minutes)}`
 
 
-
-console.log(data);
+                    
